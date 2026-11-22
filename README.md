@@ -1,6 +1,6 @@
-# pi-chrome-dev-tools
+# pi-durable-chrome-dev-tools
 
-Lazy-launch browser control for [pi](https://github.com/mariozechner/pi) agents. Uses your **system Chrome** with a persistent profile — logins, cookies, and extensions carry across sessions. Stealth-patched to avoid bot detection out of the box.
+Lazy-launch browser control for [pi-durable](https://github.com/disler/durable-pi) agents — the same tools that ship as the `chrome-dev-tools` extension in `dpi-backend`. Uses your **system Chrome** with a persistent profile — logins, cookies, and extensions carry across sessions. Stealth-patched to avoid bot detection out of the box.
 
 ---
 
@@ -20,8 +20,10 @@ Lazy-launch browser control for [pi](https://github.com/mariozechner/pi) agents.
 
 ## Quick Start
 
-```bash
-pi install npm:pi-chrome-dev-tools
+```ts
+// apps/dpi-backend/src/addons.ts — registered as the "chrome-dev-tools" addon,
+// turned on per agent from the web UI's Extend tab or configure({ extensions: { add } }).
+import { createChromeDevToolsExtension } from "./chrome-dev-tools.js";
 ```
 
 That's it. No Chrome flags, no remote debugging setup. The first `chrome_navigate` call launches Chrome automatically.

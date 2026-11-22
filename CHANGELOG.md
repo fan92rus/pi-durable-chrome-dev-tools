@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0 (2026-11-22)
+
+pi-durable port. Same 19 tools, rewritten as one `createChromeDevToolsExtension()` pi-durable extension (`defineExtension`/`defineTool`); replay-safe reads (snapshot, page_info, wait, screenshot, list_tabs), unsafe actions. Dropped the pi TUI renderResult. Source of the vendored `chrome-dev-tools` addon in durable-pi dpi-backend.
+
 ## 0.1.0 (2026-05-06)
 
 Initial release.

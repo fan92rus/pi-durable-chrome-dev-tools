@@ -1,19 +1,20 @@
 {
-  "name": "pi-chrome-dev-tools",
-  "version": "0.1.0",
-  "description": "Pi extension — lazy-launch Chrome with Playwright, persistent profile, stealth patches, simple browser tools",
+  "name": "pi-durable-chrome-dev-tools",
+  "version": "1.0.0",
+  "description": "pi-durable extension — lazy-launch Chrome with Playwright, persistent profile, stealth patches, browser tools inside a durable agent",
+  "type": "module",
   "main": "src/index.ts",
-  "keywords": ["pi-package", "pi-extension", "browser", "chrome", "playwright", "stealth", "web-automation"],
-  "author": "Allen Lowe",
+  "keywords": ["pi-durable", "pi-extension", "browser", "chrome", "playwright", "stealth", "web-automation"],
+  "author": "Allen Lowe, adapted for pi-durable by fan92rus",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lallenlowe/pi-chrome-dev-tools.git"
+    "url": "git+https://github.com/fan92rus/pi-durable-chrome-dev-tools.git"
   },
   "bugs": {
-    "url": "https://github.com/lallenlowe/pi-chrome-dev-tools/issues"
+    "url": "https://github.com/fan92rus/pi-durable-chrome-dev-tools/issues"
   },
-  "homepage": "https://github.com/lallenlowe/pi-chrome-dev-tools#readme",
+  "homepage": "https://github.com/fan92rus/pi-durable-chrome-dev-tools#readme",
   "engines": {
     "node": ">=22.0.0"
   },
@@ -25,20 +26,17 @@
     "README.md",
     "CHANGELOG.md"
   ],
-  "pi": {
-    "extensions": ["./src/index.ts"],
-    "skills": ["./skills"]
+  "exports": {
+    ".": "./src/index.ts"
   },
   "peerDependencies": {
-    "@mariozechner/pi-coding-agent": "*",
-    "@mariozechner/pi-tui": "*",
-    "typebox": "*"
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-durable": "*"
   },
   "devDependencies": {
-    "@mariozechner/pi-coding-agent": "*",
-    "@mariozechner/pi-tui": "*",
-    "typebox": "*",
-    "typescript": "^5.0.0"
+    "@earendil-works/pi-ai": "1.0.3",
+    "@earendil-works/pi-durable": "1.0.3",
+    "typescript": "^5.9.0"
   },
   "dependencies": {
     "@mr_ozio/playwright-stealth": "^1.0.0",
